@@ -12,7 +12,7 @@ export const profile = {
   stats: [
     { label: "Years Learning AI/ML", value: "1+" },
     { label: "Projects Completed", value: "3" },
-    { label: "Core ML Frameworks", value: "PyTorch,Hugging Face, Transformers" },
+    { label: "Core ML Frameworks", value: "3" },
     { label: "GitHub Repos", value: "3" },
   ],
 };
