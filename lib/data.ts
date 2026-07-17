@@ -66,6 +66,6 @@ export const social = [
 export const nav = [
   { label: "Work", href: "#work" },
   { label: "About", href: "#about" },
-  { label: "Blog", href: "#" },
+  { label: "Blog", href: "#blog" },
   { label: "Contact", href: "mailto:anshulkeng51@gmail.com" },
 ];

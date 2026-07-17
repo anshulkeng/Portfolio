@@ -53,9 +53,9 @@ export default function About() {
           </h2>
           <p className="mt-5 text-muted">
             I&apos;m an MSc Artificial Intelligence student and IT Engineer
-            focused on turning research-grade machine learning into real,
+            focused on turning research grade machine learning into real,
             usable software. My work spans deep reinforcement learning,
-            causal reasoning, and full-stack systems that connect data to
+            causal reasoning, and full stack systems that connect data to
             product.
           </p>
           <a

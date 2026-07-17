@@ -6,6 +6,7 @@ import Projects from "@/components/Projects";
 import StatsBar from "@/components/StatsBar";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
+import Blog from "@/components/blog";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Hero />
       <TechStack />
       <About />
+      <Blog />
       <Projects />
       <StatsBar />
       <CTA />
