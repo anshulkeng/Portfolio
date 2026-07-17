@@ -47,13 +47,13 @@ export const projects = [
     href: "https://github.com/anshulkeng/AI__2D__Platformer",
   },
   {
-    tag: "Genetic Programming",
-    title: "Interpretable Income Classification board",
-    description:
-      "Uses genetic programming to evolve interpretable classifiers that predict whether income exceeds $50K using demographic and employment data.",
-    image: "/GP.png",
-    cta: "View on GitHub",
-    href: "https://github.com/anshulkeng/interpretable_income_classification_genetic_programming",
+    
+  tag: "Genetic Programming",
+  title: "Interpretable Income Classification board",
+  description: "Uses genetic programming to evolve interpretable classifiers that predict whether income exceeds $50K using demographic and employment data.",
+  image: "/gp.png",
+  cta: "View on GitHub",
+  href: "https://github.com/anshulkeng/interpretable_income_classification_genetic_programming",
   },
 ];
 
