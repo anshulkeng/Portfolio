@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function About() {
   return (
@@ -13,30 +14,12 @@ export default function About() {
           transition={{ duration: 0.7, ease: "easeOut" }}
           className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-border"
         >
-          <div className="absolute inset-0 bg-gradient-to-br from-accent2/20 via-transparent to-accent1/20" />
-          <svg
-            viewBox="0 0 400 300"
-            className="h-full w-full"
-            preserveAspectRatio="xMidYMid slice"
-          >
-            <defs>
-              <linearGradient id="aboutGrad" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0%" stopColor="#38bdf8" />
-                <stop offset="100%" stopColor="#a855f7" />
-              </linearGradient>
-            </defs>
-            <rect width="400" height="300" fill="#0d0f17" />
-            {Array.from({ length: 40 }).map((_, i) => (
-              <circle
-                key={i}
-                cx={(i * 37) % 400}
-                cy={(i * 53) % 300}
-                r={1.5 + (i % 3)}
-                fill="url(#aboutGrad)"
-                opacity={0.5}
-              />
-            ))}
-          </svg>
+          <Image
+            src="/about-visual.png"
+            alt="About visual"
+            fill
+            className="object-cover"
+          />
         </motion.div>
 
         <motion.div
