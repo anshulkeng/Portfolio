@@ -4,12 +4,17 @@ import { useRef } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { projects } from "@/lib/data";
+import Image from "next/image";
+
+type Project = (typeof projects)[number] & {
+  image?: string;
+};
 
 function ProjectCard({
   project,
   index,
 }: {
-  project: (typeof projects)[number];
+  project: Project;
   index: number;
 }) {
   const ref = useRef<HTMLDivElement>(null);
@@ -44,25 +49,34 @@ function ProjectCard({
       className="glass group rounded-2xl p-1 transition-transform duration-200 ease-out"
       style={{ transformStyle: "preserve-3d" }}
     >
-      <div className="relative aspect-[16/10] overflow-hidden rounded-xl">
-        <svg viewBox="0 0 400 250" className="h-full w-full">
-          <defs>
-            <linearGradient id={`grad-${index}`} x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0%" stopColor="#38bdf8" />
-              <stop offset="100%" stopColor="#a855f7" />
-            </linearGradient>
-          </defs>
-          <rect width="400" height="250" fill="#0d0f17" />
-          <path
-            d={`M0,${140 + index * 10} C 100,${60 + index * 20} 200,${
-              200 - index * 15
-            } 400,${100 + index * 5}`}
-            stroke={`url(#grad-${index})`}
-            strokeWidth="2"
-            fill="none"
-            opacity="0.8"
+      <div className="relative aspect-[16/10] overflow-hidden rounded-xl bg-black/20">
+        {project.image ? (
+          <Image
+            src={project.image}
+            alt={project.title}
+            fill
+            className="object-contain"
           />
-        </svg>
+        ) : (
+           <svg viewBox="0 0 400 250" className="h-full w-full">
+            <defs>
+              <linearGradient id={`grad-${index}`} x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stopColor="#38bdf8" />
+                <stop offset="100%" stopColor="#a855f7" />
+              </linearGradient>
+            </defs>
+            <rect width="400" height="250" fill="#0d0f17" />
+            <path
+              d={`M0,${140 + index * 10} C 100,${60 + index * 20} 200,${
+                200 - index * 15
+              } 400,${100 + index * 5}`}
+              stroke={`url(#grad-${index})`}
+              strokeWidth="2"
+              fill="none"
+              opacity="0.8"
+            />
+          </svg>
+        )}
       </div>
       <div className="p-5">
         <p className="mb-2 font-mono text-[11px] uppercase tracking-widest text-accent1">

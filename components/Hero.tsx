@@ -2,9 +2,9 @@
 
 import { motion } from "framer-motion";
 import { Code2, Layers, BrainCircuit, Puzzle, Download } from "lucide-react";
-import NeuralCanvas from "./NeuralCanvas";
 import MagneticButton from "./MagneticButton";
 import { profile } from "@/lib/data";
+import Image from "next/image";
 
 const badgeIcons = [Code2, Layers, BrainCircuit, Puzzle];
 
@@ -122,7 +122,13 @@ export default function Hero() {
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.15 }}
             className="relative aspect-square w-full max-w-xs overflow-hidden rounded-full border border-accent2/30 shadow-glow animate-float"
           >
-            <NeuralCanvas />
+            <Image
+              src="/avatar.png"
+              alt={profile.name}
+              fill
+              className="object-cover"
+              priority
+            />
           </motion.div>
         </div>
       </div>

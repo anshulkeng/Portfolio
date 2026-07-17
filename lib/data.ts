@@ -33,7 +33,8 @@ export const projects = [
     title: "SupportSense — AIpowered multimodal customer support triage",
     description:
       "Processes text, audio, and screenshots to classify support issues, detect urgency, and escalate critical cases.",
-    cta: "View Project",
+        image: "/support-sense.png", 
+      cta: "View Project",
     href: "https://github.com/anshulkeng/supportsense",
   },
   {
@@ -41,6 +42,7 @@ export const projects = [
     title: "AI 2D Platformer — Intelligent companion and enemy behaviours",
     description:
       "A Unity 2D platformer featuring zombie enemy AI, a bat companion system, player health, pickups, and level progression.",
+    image: "/2d-platformer.png",
     cta: "View Project",
     href: "https://github.com/anshulkeng/AI__2D__Platformer",
   },
@@ -49,6 +51,7 @@ export const projects = [
     title: "Interpretable Income Classification board",
     description:
       "Uses genetic programming to evolve interpretable classifiers that predict whether income exceeds $50K using demographic and employment data.",
+    image: "/GP.png",
     cta: "View on GitHub",
     href: "https://github.com/anshulkeng/interpretable_income_classification_genetic_programming",
   },
